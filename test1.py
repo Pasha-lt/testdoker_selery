@@ -6,4 +6,4 @@ response = session.get(url)
 title = response.html.xpath('//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]')
 currency = str(title)[-11:-6]
 with open('tro.txt', 'a') as f:
-    f.write(f'{datetime.now()} - курс доллара - {currency}\n')
+    f.write(currency)
